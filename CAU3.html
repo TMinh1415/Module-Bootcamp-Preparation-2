@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thang = parseFloat(prompt("Nhập tháng để kiểm tra: "));
+    if(thang>12||thang<0)
+    {
+        alert("Yêu cầu nhập lại")
+    }
+    let nam = parseFloat(prompt("Nhập năm để kiểm tra: "));
+    if(thang === 1||thang === 3||thang === 5||thang === 7||thang === 8||thang===10||thang === 12)
+    {
+        alert(31)
+    }
+    else if(thang === 4||thang === 6||thang === 9||thang === 11)
+    {
+        alert(30)
+    }
+    if(nam % 4 === 0 && (nam % 100 !== 0 || nam % 400 === 0)&&thang===2)
+    {
+        alert(29)
+    }
+    else if(nam%100&&nam%400!==0&&thang===2)
+    {
+        alert(28)
+    }
+</script>
+</body>
+</html>

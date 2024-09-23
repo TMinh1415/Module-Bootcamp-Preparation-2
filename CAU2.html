@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function find_perfect_num(n){
+        let flag = 0, total=0;
+        for (let i=0 ; i<n ; i++)
+        {
+            if (n % i === 0)
+            {
+                total += i;
+            }
+        }
+        if (total === n && n!==0)
+        {
+            flag = 1;
+        }
+        return flag;
+    }
+    let n = parseFloat((prompt)(" nhap vao n: "));
+    let check = find_perfect_num(n);
+    if( check === 1 )
+    {
+        document.write("True");
+    }
+    else
+    {
+        document.write("False");
+    }
+</script>
+</body>
+</html>

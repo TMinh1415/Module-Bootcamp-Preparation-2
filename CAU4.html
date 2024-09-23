@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class CongNhan {
+        constructor(stt, hoTen, ngaySinh, diaChi, luong, chucVu) {
+            this.stt = stt;
+            this.hoTen = hoTen;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.luong = luong;
+            this.chucVu = chucVu;
+        }
+        hienThiThongTin() {
+            document.write("STT: " + this.stt, " ");
+            document.write("Họ và tên: " + this.hoTen, " ");
+            document.write("Ngày sinh: " + this.ngaySinh, " ");
+            document.write("Địa chỉ: " + this.diaChi, " ");
+            document.write("Lương: " + this.luong + " VND", " ");
+            document.write("Chức vụ: " + this.chucVu, " ");
+        }
+    }
+    let danhSachCongNhan = [];
+    function themCongNhan(stt, hoTen, ngaySinh, diaChi, luong, chucVu) {
+        let congNhan = new CongNhan(stt, hoTen, ngaySinh, diaChi, luong, chucVu);
+        danhSachCongNhan.push(congNhan);
+    }
+    function hienThiDanhSachCongNhan() {
+        danhSachCongNhan.forEach(congNhan => {
+            congNhan.hienThiThongTin();
+        });
+    }
+    themCongNhan(1,"Ngô Tuấn Minh", "07/04/2006", "Đà Nẵng", 1200000, "Công nhân");
+    hienThiDanhSachCongNhan();
+</script>
+</body>
+</html>
